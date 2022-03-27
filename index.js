@@ -1,7 +1,7 @@
 const corsHeaders = {
   'Access-Control-Allow-Headers': '*',
-  'Access-Control-Allow-Methods': 'GET',
-  'Access-Control-Allow-Origin': 'http://localhost:3000'
+  'Access-Control-Allow-Methods': 'POST',
+  'Access-Control-Allow-Origin': ORIGIN_URL
 }
 
 const nameToJson = (name) => {
