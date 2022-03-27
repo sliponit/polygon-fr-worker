@@ -20,9 +20,15 @@ async function handleRequest(request) {
       return new Response('Forbidden', { status: 403 })
     }
 
-    const cid = 'TODO'
+    const url = `https://api.pinata.cloud/data/testAuthentication`
+    const headers = {
+      Authorization: `Bearer ${PINATA_JWT}`,
+      'content-type': 'application/json'
+    }
+    const response = await fetch(url, { headers });
+    const cid = await response.json()
 
-    return new Response(JSON.stringify({ cid }), {
+    return new Response(JSON.stringify(cid), {
       headers: {
         'Content-type': 'application/json',
         ...corsHeaders

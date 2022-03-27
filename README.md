@@ -18,4 +18,5 @@ Further documentation for Wrangler can be found [here](https://developers.cloudf
 ### secret
 ```sh
 wrangler secret put X_API_KEY
+wrangler secret put PINATA_JWT
 ```
